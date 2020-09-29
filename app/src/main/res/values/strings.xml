@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Car Rental</string>
+    <string name="user">username</string>
+    <string name="login">Login</string>
+    <string name="password">password</string>
+    <string name="logout">Logout</string>
+    <string name="register">Register</string>
+    <string name="view_profile">View Profile</string>
+    <string name="search_reservation">Search Reservation</string>
+    <string name="search_for_cars">Search For Cars</string>
+    <string name="view_cars">View Cars</string>
+    <string name="make_reservation">Make Reservation</string>
+    <string name="view_reservation">View Reservation</string>
+    <string name="show_users">Show Users</string>
+    <string name="change_roles">Change Roles</string>
+    <string name="delete_reservation">Delete reservation</string>
+    <string name="user_home_screen">User Home Screen</string>
+    <string name="manager_home_screen">Manager Home Screen</string>
+    <string name="admin_home_screen">Admin Home Screen</string>
+</resources>
