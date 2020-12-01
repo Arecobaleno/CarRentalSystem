@@ -21,24 +21,48 @@ public class DBManager extends SQLiteOpenHelper
     @SuppressLint("SimpleDateFormat")
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String qry = "create table tbl_registerUser(firstname text, " +
-                "lastname text, username text primary key,password text,usertype text,email text,phone text,address text," +
-                "city text,state text,zipcode text,menber integer)";
+        String qry = "create table tbl_registerUser(firstName text, " +
+                "lastName text, username text primary key,password text,role text,email text,phone text,address text," +
+                "city text,state text,zipCode text,utaId text)";
         db.execSQL(qry);
-        qry = "insert into tbl_registerUser values('Zhengyu','Chen','czy','123456','Admin','12314@qq.com','13242424112','bupt','beijing','haidian','131312',0)";
+        qry = "insert into tbl_registerUser values('Zhengyu','Chen','czy','123456','Admin','12314@qq.com','13242424112','bupt','beijing','haidian','131312','1001889069')";
         db.execSQL(qry);
-        qry = "insert into tbl_registerUser values('Peihang','Liu','lph','123456','User','12314@qq.com','13242424112','bupt','beijing','haidian','131312',0)";
+        qry = "insert into tbl_registerUser values('Peihang','Liu','lph','123456','User','12314@qq.com','13242424112','bupt','beijing','haidian','131312','1001889085')";
         db.execSQL(qry);
-        qry = "insert into tbl_registerUser values('Jiaxi','Liu','ljx','123456','User','12314@qq.com','13242424112','bupt','beijing','haidian','131312',0)";
+        qry = "insert into tbl_registerUser values('Jiaxi','Liu','ljx','123456','User','12314@qq.com','13242424112','bupt','beijing','haidian','131312','1001889070')";
         db.execSQL(qry);
-        qry = "insert into tbl_registerUser values('Jiayi','Zhang','zjy','123456','User','12314@qq.com','13242424112','bupt','beijing','haidian','131312',0)";
+        qry = "insert into tbl_registerUser values('Jiayi','Zhang','zjy','123456','User','12314@qq.com','13242424112','bupt','beijing','haidian','131312','1001889097')";
         db.execSQL(qry);
-        qry = "insert into tbl_registerUser values('Yu','Feng','fy','123456','Manager','12314@qq.com','13242424112','bupt','beijing','haidian','131312',0)";
+        qry = "insert into tbl_registerUser values('Yu','Feng','fy','123456','Manager','12314@qq.com','13242424112','bupt','beijing','haidian','131312','1001889071')";
         db.execSQL(qry);
-        qry = "insert into tbl_registerUser values('Ruidong','Li','lrd','123456','Manager','12314@qq.com','13242424112','bupt','beijing','haidian','131312',0)";
+        qry = "insert into tbl_registerUser values('Ruidong','Li','lrd','123456','Manager','12314@qq.com','13242424112','bupt','beijing','haidian','131312','1001889090')";
         db.execSQL(qry);
-        qry = "create table Location (locationId text primary key, description text)";
-        ContentValues cv = new ContentValues();
+        qry = "create table car_information (carName text primary key, capacity integer," +
+                " weekdayRate real, weekendRate real, weekRate real, GPS real, OnStar real, SiriusXM real)";
+        db.execSQL(qry);
+        qry = "insert into car_information values('Smart',1,32.99,37.99,230.93,3.00,5.00,7.00)";
+        db.execSQL(qry);
+        qry = "insert into car_information values('Economy',3,39.99,44.99,279.93,3.00,5.00,7.00)";
+        db.execSQL(qry);
+        qry = "insert into car_information values('Compact',4,44.99,49.99,314.93,3.00,5.00,7.00)";
+        db.execSQL(qry);
+        qry = "insert into car_information values('Intermediate',4,45.99,50.99,321.93,3.00,5.00,7.00)";
+        db.execSQL(qry);
+        qry = "insert into car_information values('Standard',5,48.99,53.99,342.93,3.00,5.00,7.00)";
+        db.execSQL(qry);
+        qry = "insert into car_information values('Standard',5,48.99,53.99,342.93,3.00,5.00,7.00)";
+        db.execSQL(qry);
+        qry = "insert into car_information values('Full Size',6,52.99,57.99,370.93,3.00,5.00,7.00)";
+        db.execSQL(qry);
+        qry = "insert into car_information values('SUV',8,59.99,64.99,419.93,3.00,5.00,7.00)";
+        db.execSQL(qry);
+        qry = "insert into car_information values('MiniVan',9,59.99,64.99,419.93,3.00,5.00,7.00)";
+        db.execSQL(qry);
+        qry = "insert into car_information values('Ultra Sports',2,199.99,204.99,1399.93,5.00,7.00,9.00)";
+        db.execSQL(qry);
+        qry = "create table reservation (orderId text primary key, orderCreateTime text," +
+                " reservationStatus text, startDate text, startTime text, carName text, capacity integer," +
+                "duration text, rateType text, extraService text, fee real)";
         db.execSQL(qry);
     }
 

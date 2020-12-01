@@ -6,8 +6,8 @@ android {
 
     defaultConfig {
         applicationId "com.example.carrental"
-        minSdkVersion 29
-        targetSdkVersion 30
+        minSdkVersion 22
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
 
