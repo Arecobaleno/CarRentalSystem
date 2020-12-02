@@ -11,7 +11,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.io.Serializable;
+import com.example.carrental.admin.Admin;
+import com.example.carrental.manager.Manager;
+import com.example.carrental.user.User;
 
 public class MainActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
@@ -24,24 +26,29 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void login(View view) {
-        Intent intent = new Intent(this, Admin.class);
-
         EditText username = findViewById(R.id.editTextTextPersonName);
         EditText password = findViewById(R.id.editTextTextPersonName2);
 
         String data = checkUser(username, password);
+        Intent intent;
         switch (data) {
             case "Error":
                 Toast.makeText(getApplicationContext(), "Invalid Username or Password", Toast.LENGTH_SHORT).show();
                 break;
             case "Manager":
-                startActivity(new Intent(this, Manager.class));
+                intent = new Intent(this, Manager.class);
+                intent.putExtra("username", username.getText().toString().trim());
+                startActivity(intent);
                 break;
             case "Admin":
-                startActivity(new Intent(this, Admin.class));
+                intent = new Intent(this, Admin.class);
+                intent.putExtra("username", username.getText().toString().trim());
+                startActivity(intent);
                 break;
             default:
-                startActivity(new Intent(this, User.class));
+                intent = new Intent(this, User.class);
+                intent.putExtra("username", username.getText().toString().trim());
+                startActivity(intent);
                 break;
         }
         username.setText("");
@@ -49,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void register(View view) {
-
+        startActivity(new Intent(this, RegisterActivity.class));
     }
 
     public String checkUser(EditText username, EditText password) {
@@ -61,9 +68,6 @@ public class MainActivity extends AppCompatActivity {
             String query = "Select * from tbl_registerUser where username = '" + user + "' and password = '" + pwd + "'";
             cursor = sqldb.rawQuery(query, null);
             if (cursor.getCount() <= 0) {
-//                Toast.makeText(getApplicationContext(), "Invalid Username or Password", Toast.LENGTH_SHORT).show();
-//                username.setText("");
-//                password.setText("");
                 cursor.close();
                 return "Error";
             } else {
@@ -72,24 +76,9 @@ public class MainActivity extends AppCompatActivity {
                     data = cursor.getString(cursor.getColumnIndex("usertype"));
                 }
                 cursor.close();
-//                SharedPreferences.Editor session = sharedPreferences.edit();
-//                session.putString("username", user);
-//                session.putString("userType", data);
-//                session.apply();
                 return data;
-//                if (data.equals("Manager")) {
-//                    startActivity(new Intent(this, ManagerHomeScreen.class));
-//                } else if (data.equals("Operator")) {
-//                    startActivity(new Intent(this, OperatorHomeScreen.class));
-//                } else
-//                    startActivity(new Intent(this, UserHomeScreen.class));
-//                username.setText("");
-//                password.setText("");
             }
         } else {
-//            Toast.makeText(getApplicationContext(), "Invalid Username or Password", Toast.LENGTH_SHORT).show();
-//            username.setText("");
-//            password.setText("");
             cursor.close();
             return "Error";
         }

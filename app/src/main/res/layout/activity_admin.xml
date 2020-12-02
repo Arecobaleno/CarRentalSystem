@@ -4,60 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Admin">
+    tools:context=".admin.Admin">
 
     <Button
         android:id="@+id/button2"
         android:layout_width="200dp"
         android:layout_height="48dp"
-        android:layout_marginTop="32dp"
         android:onClick="logout"
         android:text="@string/logout"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button16" />
+        app:layout_constraintTop_toBottomOf="@+id/button14" />
 
     <Button
         android:id="@+id/button13"
         android:layout_width="200dp"
         android:layout_height="48dp"
+        android:onClick="view_profile"
         android:text="@string/view_profile"
+        app:layout_constraintBottom_toTopOf="@+id/button14"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="209dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button14"
         android:layout_width="200dp"
         android:layout_height="48dp"
-        android:layout_marginTop="32dp"
         android:text="@string/show_users"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button13" />
 
-    <Button
-        android:id="@+id/button15"
-        android:layout_width="200dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/change_roles"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button14" />
-
-    <Button
-        android:id="@+id/button16"
-        android:layout_width="200dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/delete_reservation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button15" />
 </androidx.constraintlayout.widget.ConstraintLayout>
