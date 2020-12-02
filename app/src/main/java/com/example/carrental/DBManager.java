@@ -23,19 +23,19 @@ public class DBManager extends SQLiteOpenHelper
     public void onCreate(SQLiteDatabase db) {
         String qry = "create table tbl_registerUser(firstName text, " +
                 "lastName text, username text primary key,password text,role text,email text,phone text,address text," +
-                "city text,state text,zipCode text,utaId text)";
+                "city text,state text,zipCode text,utaId text,member integer)";
         db.execSQL(qry);
-        qry = "insert into tbl_registerUser values('Zhengyu','Chen','czy','123456','Admin','12314@qq.com','13242424112','bupt','beijing','haidian','131312','1001889069')";
+        qry = "insert into tbl_registerUser values('Zhengyu','Chen','czy','123456','Admin','12314@qq.com','13242424112','bupt','beijing','haidian','131312','1001889069',1)";
         db.execSQL(qry);
-        qry = "insert into tbl_registerUser values('Peihang','Liu','lph','123456','User','12314@qq.com','13242424112','bupt','beijing','haidian','131312','1001889085')";
+        qry = "insert into tbl_registerUser values('Peihang','Liu','lph','123456','User','12314@qq.com','13242424112','bupt','beijing','haidian','131312','1001889085',1)";
         db.execSQL(qry);
-        qry = "insert into tbl_registerUser values('Jiaxi','Liu','ljx','123456','User','12314@qq.com','13242424112','bupt','beijing','haidian','131312','1001889070')";
+        qry = "insert into tbl_registerUser values('Jiaxi','Liu','ljx','123456','User','12314@qq.com','13242424112','bupt','beijing','haidian','131312','1001889070',1)";
         db.execSQL(qry);
-        qry = "insert into tbl_registerUser values('Jiayi','Zhang','zjy','123456','User','12314@qq.com','13242424112','bupt','beijing','haidian','131312','1001889097')";
+        qry = "insert into tbl_registerUser values('Jiayi','Zhang','zjy','123456','User','12314@qq.com','13242424112','bupt','beijing','haidian','131312','1001889097',1)";
         db.execSQL(qry);
-        qry = "insert into tbl_registerUser values('Yu','Feng','fy','123456','Manager','12314@qq.com','13242424112','bupt','beijing','haidian','131312','1001889071')";
+        qry = "insert into tbl_registerUser values('Yu','Feng','fy','123456','Manager','12314@qq.com','13242424112','bupt','beijing','haidian','131312','1001889071',1)";
         db.execSQL(qry);
-        qry = "insert into tbl_registerUser values('Ruidong','Li','lrd','123456','Manager','12314@qq.com','13242424112','bupt','beijing','haidian','131312','1001889090')";
+        qry = "insert into tbl_registerUser values('Ruidong','Li','lrd','123456','Manager','12314@qq.com','13242424112','bupt','beijing','haidian','131312','1001889090',1)";
         db.execSQL(qry);
         qry = "create table car_information (carName text primary key, capacity integer," +
                 " weekdayRate real, weekendRate real, weekRate real, GPS real, OnStar real, SiriusXM real)";
@@ -61,8 +61,8 @@ public class DBManager extends SQLiteOpenHelper
         qry = "insert into car_information values('Ultra Sports',2,199.99,204.99,1399.93,5.00,7.00,9.00)";
         db.execSQL(qry);
         qry = "create table reservation (orderId text primary key, orderCreateTime text," +
-                " reservationStatus text, startDate text, startTime text, carName text, capacity integer," +
-                "duration text, rateType text, extraService text, fee real)";
+                " reservationStatus text, startDate real, startTime text, carName text, capacity integer," +
+                "duration real, rateType text, extraService text, fee real)";
         db.execSQL(qry);
     }
 
