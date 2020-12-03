@@ -20,7 +20,7 @@ import java.util.List;
 
 public class Userlist extends AppCompatActivity {
 
-    private List<user_item> user_items = new ArrayList<>();
+    private final List<user_item> user_items = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
