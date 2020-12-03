@@ -1,197 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    android:gravity="center"
+    android:orientation="vertical">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/register_user"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:layout_height="wrap_content"
+        android:hint="@string/user" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/user"
-            app:layout_constraintBottom_toTopOf="@+id/editText2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/register_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="@string/password" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/password"
-            app:layout_constraintBottom_toTopOf="@+id/editText3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/register_last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/last_name" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/last_name"
-            app:layout_constraintBottom_toTopOf="@+id/editText4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/register_first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/first_name" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/first_name"
-            app:layout_constraintBottom_toTopOf="@+id/editText5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText3" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/register_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/phone" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/phone"
-            app:layout_constraintBottom_toTopOf="@+id/editText7"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText5" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/register_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/prompt_email" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/prompt_email"
-            app:layout_constraintBottom_toTopOf="@+id/editText8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText6" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/register_street"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/street_address" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/street_address"
-            app:layout_constraintBottom_toTopOf="@+id/editText9"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText7" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/register_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/city" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/city"
-            app:layout_constraintBottom_toTopOf="@+id/editText11"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText8" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/register_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/state" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/state"
-            app:layout_constraintBottom_toTopOf="@+id/editText10"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText9" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/register_zip_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/zip_code" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/zip_code"
-            app:layout_constraintBottom_toTopOf="@+id/button17"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText11" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/register_uta_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/uta_id" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/uta_id"
-            app:layout_constraintBottom_toTopOf="@+id/editText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <RadioGroup
+        android:id="@+id/register_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <RadioGroup
-            android:id="@+id/role"
+        <RadioButton
+            android:id="@+id/register_role_admin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:text="@string/role_admin" />
 
-            <RadioButton
-                android:id="@+id/role_admin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/role_admin" />
-
-            <RadioButton
-                android:id="@+id/role_manager"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/role_manager" />
-
-            <RadioButton
-                android:id="@+id/role_user"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/role_user" />
-        </RadioGroup>
-
-        <RadioGroup
-            android:id="@+id/member"
+        <RadioButton
+            android:id="@+id/register_role_manager"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:visibility="gone">
+            android:text="@string/role_manager" />
 
-            <RadioButton
-                android:id="@+id/member_true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/member_true" />
-
-            <RadioButton
-                android:id="@+id/member_false"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/member_false" />
-        </RadioGroup>
-
-        <Button
-            android:id="@+id/button17"
+        <RadioButton
+            android:id="@+id/register_role_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="register"
-            android:text="@string/register"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/editText10"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/editText10"
-            app:layout_constraintTop_toBottomOf="@+id/editText10" />
+            android:text="@string/role_user" />
+    </RadioGroup>
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+    <RadioGroup
+        android:id="@+id/register_member"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <RadioButton
+            android:id="@+id/register_member_true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/member_true" />
+
+        <RadioButton
+            android:id="@+id/register_member_false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/member_false" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/register_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="register"
+        android:text="@string/register" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

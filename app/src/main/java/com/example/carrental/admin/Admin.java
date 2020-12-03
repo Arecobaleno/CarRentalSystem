@@ -30,6 +30,12 @@ public class Admin extends AppCompatActivity {
         String username = last_intent.getStringExtra("username");
         Intent intent = new Intent(this, ProfileActivity.class);
         intent.putExtra("username", username);
+        intent.putExtra("admin", false);
+        startActivity(intent);
+    }
+
+    public void show_users_list(View view) {
+        Intent intent = new Intent(this, Userlist.class);
         startActivity(intent);
     }
 }

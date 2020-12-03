@@ -29,6 +29,7 @@ public class Manager extends AppCompatActivity {
         String username = last_intent.getStringExtra("username");
         Intent intent = new Intent(this, ProfileActivity.class);
         intent.putExtra("username", username);
+        intent.putExtra("admin", false);
         startActivity(intent);
     }
 

@@ -8,6 +8,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".admin.Userlist"></activity>
         <activity android:name=".manager.CarSearchActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".RegisterActivity" />
@@ -21,7 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
