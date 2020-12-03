@@ -8,7 +8,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".cars.Car_list"></activity>
+        <activity android:name=".cars.Car_detail"></activity>
+        <activity android:name=".cars.Car_list" />
         <activity android:name=".admin.Userlist" />
         <activity android:name=".manager.CarSearchActivity" />
         <activity android:name=".ProfileActivity" />

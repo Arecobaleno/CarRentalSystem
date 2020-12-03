@@ -9,6 +9,7 @@ import android.view.View;
 import com.example.carrental.MainActivity;
 import com.example.carrental.ProfileActivity;
 import com.example.carrental.R;
+import com.example.carrental.cars.Car_list;
 
 public class User extends AppCompatActivity {
 
@@ -30,6 +31,11 @@ public class User extends AppCompatActivity {
         Intent intent = new Intent(this, ProfileActivity.class);
         intent.putExtra("username", username);
         intent.putExtra("admin", false);
+        startActivity(intent);
+    }
+
+    public void view_cars(View view) {
+        Intent intent = new Intent(this, Car_list.class);
         startActivity(intent);
     }
 }

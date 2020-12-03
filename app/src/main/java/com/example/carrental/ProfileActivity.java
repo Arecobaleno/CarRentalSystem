@@ -115,11 +115,20 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void update(View view) {
-// TODO
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        String qry = "delete from user_info where username='" + username + "'";
+        db.execSQL(qry);
+        qry = "insert into user_info values('"+firstname+"','"+lastname+"','"+username+"','"+password+"','"+usertype+"','"+email+"','"+phone+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+utaid+"',"+ Integer.valueOf(member) +")";
+        db.execSQL(qry);
         Toast.makeText(getApplicationContext(), "Updated Successfully", Toast.LENGTH_SHORT).show();
     }
 // TODO
     public void revoke(View view) {
         Toast.makeText(getApplicationContext(), "Revoked Successfully", Toast.LENGTH_SHORT).show();
+    }
+
+    public void logout(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

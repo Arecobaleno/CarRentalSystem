@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.carrental.MainActivity;
 import com.example.carrental.MyDatabaseHelper;
 import com.example.carrental.ProfileActivity;
 import com.example.carrental.R;
@@ -56,5 +57,10 @@ public class Userlist extends AppCompatActivity {
             } while (cursor.moveToNext());
         }
         cursor.close();
+    }
+
+    public void logout(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
