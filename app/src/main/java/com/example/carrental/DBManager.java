@@ -59,7 +59,7 @@ public class DBManager extends SQLiteOpenHelper
         qry = "insert into car_information values('Ultra Sports',2,199.99,204.99,1399.93,5.00,7.00,9.00)";
         db.execSQL(qry);
         qry = "create table reservation (orderId text primary key, orderCreateTime text," +
-                " reservationStatus text, startDate real, startTime text, carName text, capacity integer," +
+                " reservationStatus text, startDate real, startTime text,username text,utaId text, phone text, email text, carName text, capacity integer," +
                 "duration real, rateType text, extraService text, fee real)";
         db.execSQL(qry);
     }
