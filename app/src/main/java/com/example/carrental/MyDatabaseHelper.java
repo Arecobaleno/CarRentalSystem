@@ -37,7 +37,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             + "orderId text primary key, "
             + "orderCreateTime text, "
             + "reservationStatus text, "
-            + "startDate real, "
+            + "startDate text, "
             + "startTime text, "
             + "username text, "
             + "utaId text, "
@@ -45,7 +45,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             + "email text, "
             + "carName text, "
             + "capacity integer, "
-            + "duration real, "
+            + "duration integer, "
             + "rateType text, "
             + "extraService text, "
             + "fee real)";

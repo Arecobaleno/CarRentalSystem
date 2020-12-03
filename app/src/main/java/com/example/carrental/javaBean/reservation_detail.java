@@ -4,7 +4,7 @@ public class reservation_detail {
     private String orderId;
     private String orderCreateTime;
     private String reservationStatus;
-    private Double startDate;
+    private String startDate;
     private String startTime;
     private String username;
     private String utaId;
@@ -12,15 +12,12 @@ public class reservation_detail {
     private String email;
     private String carName;
     private String capacity;
-    private Double duration;
+    private int duration;
     private String rateType;
     private String extraService;
     private Double fee;
 
-    public reservation_detail(String orderId, String orderCreateTime, String reservationStatus,
-                              Double startDate, String startTime, String username, String utaId,
-                              String phone, String email, String carName, String capacity,
-                              Double duration, String rateType, String extraService, Double fee) {
+    public reservation_detail(String orderId, String orderCreateTime, String reservationStatus, String startDate, String startTime, String username, String utaId, String phone, String email, String carName, String capacity, int duration, String rateType, String extraService, Double fee) {
         this.orderId = orderId;
         this.orderCreateTime = orderCreateTime;
         this.reservationStatus = reservationStatus;
@@ -37,7 +34,6 @@ public class reservation_detail {
         this.extraService = extraService;
         this.fee = fee;
     }
-
 
     public String getOrderId() {
         return orderId;
@@ -63,11 +59,11 @@ public class reservation_detail {
         this.reservationStatus = reservationStatus;
     }
 
-    public Double getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Double startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
@@ -127,11 +123,11 @@ public class reservation_detail {
         this.capacity = capacity;
     }
 
-    public Double getDuration() {
+    public int getDuration() {
         return duration;
     }
 
-    public void setDuration(Double duration) {
+    public void setDuration(int duration) {
         this.duration = duration;
     }
 

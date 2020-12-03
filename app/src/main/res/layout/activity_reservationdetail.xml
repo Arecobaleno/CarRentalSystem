@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.LinearLayoutCompat
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -24,7 +25,77 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="false"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/reservation_orderCreateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/reservation_reservationStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/reservation_startDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/reservation_startTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/reservation_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/reservation_utaId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/reservation_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/reservation_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/reservation_carName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/reservation_capacity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/reservation_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/reservation_rateType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/reservation_extraService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/reservation_fee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"/>
 
 
 
-</androidx.constraintlayout.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

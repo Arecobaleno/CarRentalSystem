@@ -4,10 +4,10 @@ public class reservation_item {
     private String orderId;
     private String orderCreateTime;
     private String reservationStatus;
-    private Double startDate;
+    private String startDate;
     private Double fee;
 
-    public reservation_item(String orderId, String orderCreateTime, String reservationStatus, Double startDate, Double fee) {
+    public reservation_item(String orderId, String orderCreateTime, String reservationStatus, String startDate, Double fee) {
         this.orderId = orderId;
         this.orderCreateTime = orderCreateTime;
         this.reservationStatus = reservationStatus;
@@ -39,11 +39,11 @@ public class reservation_item {
         this.reservationStatus = reservationStatus;
     }
 
-    public Double getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Double startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
